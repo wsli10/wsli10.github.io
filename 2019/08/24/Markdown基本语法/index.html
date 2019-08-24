@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Markdown基本语法"><meta name="keywords" content="markdown"><meta name="author" content="Wsli,undefined"><meta name="copyright" content="Wsli"><title>Markdown基本语法【李温水】</title><link rel="stylesheet" href="/css/fan.css"><link rel="stylesheet" href="/css/thirdparty/jquery.mCustomScrollbar.min.css"><link rel="icon" href="/favicon.ico"><!-- script(src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")--><script src="/js/mathjax/mathjax.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+});
+</script><script>var isPassword = '' || false;
+if (isPassword) {
+    if (prompt('请输入文章密码') !== '') {
+        alert('密码错误！');
+        history.back();
+    }
+}</script><script>window.GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+}</script></head><body><canvas id="universe"></canvas><!--#body--><div id="sidebar"><div class="toggle-sidebar-info button-hover"><span data-toggle="文章目录">站点概览</span></div><div class="sidebar-toc"><div class="sidebar-toc-title">目录</div><div class="sidebar-toc-progress"><span class="progress-notice">您已阅读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc-progress-bar"></div></div><div class="sidebar-toc-content" id="sidebar-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#markdown简单语法"><span class="toc-number">1.</span> <span class="toc-text">markdown简单语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、标题"><span class="toc-number">1.1.</span> <span class="toc-text">一、标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、字体"><span class="toc-number">1.2.</span> <span class="toc-text">二、字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、引用"><span class="toc-number">1.3.</span> <span class="toc-text">三、引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、分割线"><span class="toc-number">1.4.</span> <span class="toc-text">四、分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、图片"><span class="toc-number">1.5.</span> <span class="toc-text">五、图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、超链接"><span class="toc-number">1.6.</span> <span class="toc-text">六、超链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、列表"><span class="toc-number">1.7.</span> <span class="toc-text">七、列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、表格"><span class="toc-number">1.8.</span> <span class="toc-text">八、表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#九、代码"><span class="toc-number">1.9.</span> <span class="toc-text">九、代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十、流程图"><span class="toc-number">1.10.</span> <span class="toc-text">十、流程图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#flow流程图"><span class="toc-number">1.10.1.</span> <span class="toc-text">flow流程图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mermaid流程图"><span class="toc-number">1.10.2.</span> <span class="toc-text">mermaid流程图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#流程图方向"><span class="toc-number">1.10.2.1.</span> <span class="toc-text">流程图方向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基本图形"><span class="toc-number">1.10.2.2.</span> <span class="toc-text">基本图形</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#节点之间的连接"><span class="toc-number">1.10.2.3.</span> <span class="toc-text">节点之间的连接</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info-avatar"><img class="author-info-avatar-img" src="/avatar.png"></div><div class="author-info-name">Wsli</div><div class="author-info-description">温水煮华雄！</div><div class="links-buttons"><a class="links-button button-hover" href="https://github.com/wsli10" target="_blank">GitHub<i class="icon-dot bg-color10"></i></a><a class="links-button button-hover" href="mailto:wsli10@126.com" target="_blank">E-Mail<i class="icon-dot bg-color9"></i></a><a class="links-button button-hover" href="tencent://message/?uin=2572841813&amp;Site=&amp;Menu=yes" target="_blank">QQ<i class="icon-dot bg-color10"></i></a></div><div class="author-info-articles"><a class="author-info-articles-archives article-meta" href="/archives"><span class="pull-top">日志</span><span class="pull-bottom">3</span></a><a class="author-info-articles-tags article-meta" href="/tags"><span class="pull-top">标签</span><span class="pull-bottom">2</span></a><a class="author-info-articles-categories article-meta" href="/categories"><span class="pull-top">分类</span><span class="pull-bottom">2</span></a></div></div></div><div id="main-container"><header><div id="menu-outer"><i class="menu-list-icon fas fa-bars"></i><nav id="menu-inner"><a class="menu-item" href="/">首页</a><a class="menu-item" href="/tags">标签</a><a class="menu-item" href="/categories">分类</a><a class="menu-item" href="/archives">归档</a><a class="menu-item" href="/about">关于</a></nav><div class="right-info"><a class="title-name" href="/">李温水</a><span id="now-time"></span></div></div></header><div id="content-outer"><div id="content-inner"><article id="post"><div class="post-header"><div class="title">Markdown基本语法</div><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 发表于 2019-08-24 | 更新于 2019-08-24</time><!--time.button-hover.post-date #[i.fas.fa-calendar-alt.article-icon(aria-hidden="true")] #[=__('post.modified')] #[=date(page['updated'], config.date_format)]--><div class="button-hover categories"><i class="fa fa-inbox article-icon" aria-hidden="true"></i><a class="link-a" href="/categories/tools/">tools</a></div><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/markdown/">markdown</a></div></div></div><div class="main-content"><h1 id="markdown简单语法"><a href="#markdown简单语法" class="headerlink" title="markdown简单语法"></a>markdown简单语法</h1><ul>
+<li>什么是markdown?<br>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。markdown</li>
+<li>为什么要使用markdown？<br><del>轻量、优雅、流行</del>不然用txt？</li>
+</ul>
+<h2 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h2><p>在想要设置为标题的文字前面加#来表示（#后要加空格）。一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。</p>
+<h2 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h2><ul>
+<li>斜体<br>要倾斜的文字左右分别用一个*号包起来</li>
+<li>加粗<br>要加粗的文字左右分别用两个*号包起来</li>
+<li>斜体加粗<br>要倾斜的文字左右分别用三个*号包起来</li>
+<li>删除线<br>要加删除线的文字左右分别用两个~~号包起来</li>
+</ul>
+<h2 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h2><p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;…</p>
+<h2 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h2><p>三个或者三个以上的 - 或者 * 都可以。</p>
+<a id="more"></a>
+
+<h2 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a>五、图片</h2><p>![图片alt](图片地址 ‘’图片title’’)<br>图片alt就是显示在图片下面的文字，相当于对图片内容的解释。<br>图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</p>
+<h2 id="六、超链接"><a href="#六、超链接" class="headerlink" title="六、超链接"></a>六、超链接</h2><p>[超链接名](超链接地址 ‘’超链接title’’)<br>title可加可不加</p>
+<h2 id="七、列表"><a href="#七、列表" class="headerlink" title="七、列表"></a>七、列表</h2><ul>
+<li><p>无序列表<br>  语法：无序列表用 - + * 任何一种都可以</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- 列表内容</span><br><span class="line">+ 列表内容</span><br><span class="line">* 列表内容</span><br><span class="line"></span><br><span class="line">注意：- + * 跟内容之间都要有一个空格</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有序列表<br>  数字加点</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 列表内容</span><br><span class="line">2. 列表内容</span><br><span class="line">注意：序号跟内容之间要有空格,序号会自动更新</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列表嵌套<br>  在父级的基础上，子级在开头加两个空格（1个Tab）即可。</p>
+</li>
+</ul>
+<h2 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|表头|表头|表头|</span><br><span class="line">|---|:--:|---:|</span><br><span class="line">|内容|内容|内容|</span><br><span class="line">|内容|内容|内容|</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th align="center">表头</th>
+<th align="right">表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>内容</td>
+<td align="center">内容</td>
+<td align="right">内容</td>
+</tr>
+<tr>
+<td>内容</td>
+<td align="center">内容</td>
+<td align="right">内容</td>
+</tr>
+</tbody></table>
+<h2 id="九、代码"><a href="#九、代码" class="headerlink" title="九、代码"></a>九、代码</h2><p>单行代码：代码之间分别用一个反引号包起来<br>代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p>
+<h2 id="十、流程图"><a href="#十、流程图" class="headerlink" title="十、流程图"></a>十、流程图</h2><h3 id="flow流程图"><a href="#flow流程图" class="headerlink" title="flow流程图"></a>flow流程图</h3><blockquote>
+<p>流程图编写是最好是顶格写，用tab退格会出现问题不容易移植,特别注意前后空格，否则无法解析</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">```flow</span><br><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line"></span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes) -&gt; e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">`` `</span><br></pre></td></tr></table></figure>
+
+<h3 id="mermaid流程图"><a href="#mermaid流程图" class="headerlink" title="mermaid流程图"></a>mermaid流程图</h3><p>注意 vscode 支持预览需要插件 如<a href="https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid" target="_blank" rel="noopener">Markdown Preview Mermaid Support</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">``` mermaid</span><br><span class="line">    graph LR;</span><br><span class="line">    a --&gt; id&#123;b&#125;;</span><br><span class="line">    id&#123;b&#125; --&gt; c;</span><br><span class="line">    c --&gt; id&#123;b&#125;;</span><br><span class="line">    id&#123;b&#125; --&gt; d;</span><br><span class="line">`` `</span><br></pre></td></tr></table></figure>
+
+<h4 id="流程图方向"><a href="#流程图方向" class="headerlink" title="流程图方向"></a>流程图方向</h4><ul>
+<li>TB 从上到下</li>
+<li>BT 从下到上</li>
+<li>RL 从右到左</li>
+<li>LR 从左到右</li>
+<li>TD 同TB 从上到下</li>
+</ul>
+<h4 id="基本图形"><a href="#基本图形" class="headerlink" title="基本图形"></a>基本图形</h4><ul>
+<li>id + [文字描述]矩形</li>
+<li>id + (文字描述)圆角矩形</li>
+<li>id + &gt;文字描述]不对称的矩形</li>
+<li>id + {文字描述}菱形</li>
+<li>id + ((文字描述))圆形</li>
+</ul>
+<h4 id="节点之间的连接"><a href="#节点之间的连接" class="headerlink" title="节点之间的连接"></a>节点之间的连接</h4><ul>
+<li>A –&gt; B  A带箭头指向B</li>
+<li>A — B  A不带箭头指向B</li>
+<li>A -.- B  A用虚线指向B</li>
+<li>A -.-&gt; B  A用带箭头的虚线指向B</li>
+<li>A ==&gt; B   A用加粗的箭头指向B</li>
+<li>A – 描述 — B  A不带箭头指向B并在中间加上文字描述</li>
+<li>A – 描述 –&gt; B  A带箭头指向B并在中间加上文字描述</li>
+<li>A -. 描述 .-&gt; B  A用带箭头的虚线指向B并在中间加上文字描述</li>
+<li>A == 描述 ==&gt; B  A用加粗的箭头指向B并在中间加上文字描述</li>
+</ul>
+</div><div class="post-copyright"><div class="post-copyright-author"><span class="post-copyright-meta">本文作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Wsli</a></span></div><div class="post-copyright-type"><span class="post-copyright-meta">本文链接: </span><span class="post-copyright-info"><a href="https://wsli10.github.io/2019/08/24/Markdown基本语法/">https://wsli10.github.io/2019/08/24/Markdown基本语法/</a></span></div><div class="post-copyright-notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://wsli10.github.io">李温水</a>！</span></div></div></article><div id="pagination"><div class="next-post pull-right"><span class="line line-top"></span><span class="line line-right"></span><span class="line line-bottom"></span><span class="line line-left"></span><a href="/2019/08/22/vue/"><span>Hello,vue!</span><span>&nbsp;</span><i class="fas fa-angle-right"></i></a></div></div><!--div!= paginator()--></div></div><div class="button-hover" id="return-top"><i class="fas fa-arrow-up" aria-hidden="true"></i></div><footer><div id="footer"><div class="button-hover" id="side-button"><i class="fas fa-arrow-right"></i></div><div class="right-content"><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fas fa-file-o"></i></span><span id="busuanzi_value_page_pv"></span><span></span></div><div class="copyright">&copy;2017 ～ 2019 By Wsli</div></div></div></footer></div><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery-3.3.1.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/velocity.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery.mCustomScrollbar.concat.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/fan.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/canvas_bg.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/utils.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/scroll.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/sidebar.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/copy.js"></script><!--script(src=url)--></body></html>
