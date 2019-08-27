@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="VSCode 工欲善其事必先利其器"><meta name="keywords" content="VSCode"><meta name="author" content="Wsli,undefined"><meta name="copyright" content="Wsli"><title>VSCode 工欲善其事必先利其器【李温水】</title><link rel="stylesheet" href="/css/fan.css"><link rel="stylesheet" href="/css/thirdparty/jquery.mCustomScrollbar.min.css"><link rel="icon" href="/favicon.ico"><!-- script(src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")--><script src="/js/mathjax/mathjax.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+});
+</script><script>var isPassword = '' || false;
+if (isPassword) {
+    if (prompt('请输入文章密码') !== '') {
+        alert('密码错误！');
+        history.back();
+    }
+}</script><script>window.GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+}</script></head><body><canvas id="universe"></canvas><!--#body--><div id="sidebar"><div class="toggle-sidebar-info button-hover"><span data-toggle="文章目录">站点概览</span></div><div class="sidebar-toc"><div class="sidebar-toc-title">目录</div><div class="sidebar-toc-progress"><span class="progress-notice">您已阅读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc-progress-bar"></div></div><div class="sidebar-toc-content" id="sidebar-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Visual-Studio-Code"><span class="toc-number">1.</span> <span class="toc-text">Visual Studio Code</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#卸载"><span class="toc-number">1.2.</span> <span class="toc-text">卸载</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vscode-快捷键"><span class="toc-number">2.</span> <span class="toc-text">vscode 快捷键</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常用插件推荐"><span class="toc-number">3.</span> <span class="toc-text">常用插件推荐</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#常用插件"><span class="toc-number">3.1.</span> <span class="toc-text">常用插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码提示类插件"><span class="toc-number">3.2.</span> <span class="toc-text">代码提示类插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VUE-插件"><span class="toc-number">3.3.</span> <span class="toc-text">VUE 插件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#VSCode-常见问题"><span class="toc-number">4.</span> <span class="toc-text">VSCode 常见问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#settings-json"><span class="toc-number">5.</span> <span class="toc-text">settings.json</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info-avatar"><img class="author-info-avatar-img" src="/avatar.png"></div><div class="author-info-name">Wsli</div><div class="author-info-description">温水煮华雄！</div><div class="links-buttons"><a class="links-button button-hover" href="https://github.com/wsli10" target="_blank">GitHub<i class="icon-dot bg-color7"></i></a><a class="links-button button-hover" href="mailto:wsli10@126.com" target="_blank">E-Mail<i class="icon-dot bg-color3"></i></a><a class="links-button button-hover" href="tencent://message/?uin=2572841813&amp;Site=&amp;Menu=yes" target="_blank">QQ<i class="icon-dot bg-color10"></i></a></div><div class="author-info-articles"><a class="author-info-articles-archives article-meta" href="/archives"><span class="pull-top">日志</span><span class="pull-bottom">5</span></a><a class="author-info-articles-tags article-meta" href="/tags"><span class="pull-top">标签</span><span class="pull-bottom">4</span></a><a class="author-info-articles-categories article-meta" href="/categories"><span class="pull-top">分类</span><span class="pull-bottom">2</span></a></div></div></div><div id="main-container"><header><div id="menu-outer"><i class="menu-list-icon fas fa-bars"></i><nav id="menu-inner"><a class="menu-item" href="/">首页</a><a class="menu-item" href="/tags">标签</a><a class="menu-item" href="/categories">分类</a><a class="menu-item" href="/archives">归档</a><a class="menu-item" href="/about">关于</a></nav><div class="right-info"><a class="title-name" href="/">李温水</a><span id="now-time"></span></div></div></header><div id="content-outer"><div id="content-inner"><article id="post"><div class="post-header"><div class="title">VSCode 工欲善其事必先利其器</div><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 发表于 2019-08-27 | 更新于 2019-08-27</time><!--time.button-hover.post-date #[i.fas.fa-calendar-alt.article-icon(aria-hidden="true")] #[=__('post.modified')] #[=date(page['updated'], config.date_format)]--><div class="button-hover categories"><i class="fa fa-inbox article-icon" aria-hidden="true"></i><a class="link-a" href="/categories/tools/">tools</a></div><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="/tags/VSCode/">VSCode</a></div></div></div><div class="main-content"><h1 id="Visual-Studio-Code"><a href="#Visual-Studio-Code" class="headerlink" title="Visual Studio Code"></a>Visual Studio Code</h1><p>Visual Studio Code,简称 vscode，比德芙还丝滑的编辑器-_-</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>直接<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">官网</a>下载安装</p>
+<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><p>1、控制面板卸载软件安装，<br>2、删除扩展和配置信息<br>把以下两个目录删除即可<code>c/users/users/vscode</code> <code>c/users/AppData/Roaming/Code</code></p>
+<h1 id="vscode-快捷键"><a href="#vscode-快捷键" class="headerlink" title="vscode 快捷键"></a>vscode 快捷键</h1><ul>
+<li><p>打开关闭快捷键：</p>
+<ul>
+<li>Ctrl +”~” 打开终端</li>
+<li>Ctrl+Shift+P,F1 展示全局命令面板</li>
+<li>Ctrl+P 快速打开最近打开的文件</li>
+<li>Ctrl+Shift+N 打开新的编辑器窗口</li>
+<li>Ctrl+Shift+W 关闭编辑器</li>
+<li>Ctrl + | 在新窗口打开当前文件</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+
+<ul>
+<li><p>编辑快捷键</p>
+<ul>
+<li>Alt + up/down 移动行上下</li>
+<li>Shift + Alt up/down 在当前行上下复制当前行</li>
+<li>Ctrl + Shift + K 删除行</li>
+<li>Ctrl + Enter 在当前行下插入新的一行</li>
+<li>Ctrl + Shift + Enter 在当前行上插入新的一行</li>
+<li>Ctrl + Shift + | 匹配花括号的闭合处，跳转</li>
+<li>Ctrl + ] 或 [ 行缩进</li>
+<li>Home 光标跳转到行头</li>
+<li>End 光标跳转到行尾</li>
+<li>Ctrl + Home 跳转到页头</li>
+<li>Ctrl + End 跳转到页尾</li>
+<li>Ctrl + up/down 行视图上下偏移</li>
+<li>Alt + PgUp/PgDown 屏视图上下偏移</li>
+<li>Ctrl + Shift + [ 折叠区域代码</li>
+<li>Ctrl + Shift + ] 展开区域代码</li>
+<li>Ctrl + / 添加关闭行注释</li>
+<li>Shift + Alt +A 块区域注释</li>
+<li>Alt + Z 添加关闭词汇包含</li>
+</ul>
+</li>
+<li><p>导航快捷键</p>
+<ul>
+<li>Ctrl + T 列出所有符号</li>
+<li>Ctrl + G 跳转行</li>
+<li>Ctrl + P 跳转文件</li>
+<li>Ctrl + Shift + O 跳转到符号处</li>
+<li>Ctrl + Shift + M 或 Ctrl + J 打开问题展示面板</li>
+<li>F8 跳转到下一个错误或者警告</li>
+<li>Shift + F8 跳转到上一个错误或者警告</li>
+<li>Ctrl + Shift + Tab 切换到最近打开的文件</li>
+<li>Alt + left / right 向后、向前</li>
+<li>Ctrl + M 进入用 Tab 来移动焦点</li>
+<li>Ctrl + F 查询</li>
+<li>Ctrl + H 替换</li>
+<li>F3 / Shift + F3 查询下一个/上一个</li>
+<li>Alt + Enter 选中所有出现在查询中的</li>
+<li>Ctrl + D 匹配当前选中的词汇或者行，再次选中-可操作</li>
+</ul>
+</li>
+<li><p>多行光标快捷键</p>
+<ul>
+<li>Alt + Click 插入光标-支持多个</li>
+<li>Ctrl + Alt + up/down 上下插入光标-支持多个</li>
+<li>Ctrl + U 撤销最后一次光标操作</li>
+<li>Shift + Alt + I 插入光标到选中范围内所有行结束符</li>
+<li>Ctrl + I 选中当前行</li>
+<li>Ctrl + Shift + L 选择所有出现在当前选中的行-操作</li>
+<li>Ctrl + F2 选择所有出现在当前选中的词汇-操作</li>
+<li>Shift + Alt + right 从光标处扩展选中全行</li>
+<li>Shift + Alt + left 收缩选择区域</li>
+<li>Shift + Alt + (drag mouse) 鼠标拖动区域，同时在多个行结束符插入光标</li>
+<li>Ctrl + Shift + Alt + (Arrow Key) 也是插入多行光标的[方向键控制]</li>
+<li>Ctrl + Shift + Alt + PgUp/PgDown 也是插入多行光标的[整屏生效]</li>
+<li>Esc Esc 连续按两次 Esc 键取消多行光标</li>
+<li>Shift + Alt + F 格式化代码</li>
+<li>F12 跳转到定义处</li>
+<li>Alt + F12 代码片段显示定义</li>
+<li>Ctrl + K F12 在其他窗口打开定义处</li>
+<li>Ctrl + . 快速修复部分可以修复的语法错误</li>
+<li>Shift + F12 显示所有引用</li>
+<li>F2 重命名符号</li>
+<li>Ctrl + Shift + . / , 替换下个值</li>
+</ul>
+</li>
+<li><p>编辑器管理快捷键</p>
+<ul>
+<li>Ctrl + F4, Ctrl + W 关闭编辑器</li>
+<li>Ctrl + |切割编辑窗口</li>
+<li>Ctrl + 1/2/3 切换焦点在不同的切割窗口</li>
+<li>Ctrl + Shift + PgUp/PgDown 切换标签页的位置</li>
+</ul>
+</li>
+<li><p>文件管理快捷键</p>
+<ul>
+<li>Ctrl + N 新建文件</li>
+<li>Ctrl + O 打开文件</li>
+<li>Ctrl + S 保存文件</li>
+<li>Ctrl + Shift + S 另存为</li>
+<li>Ctrl + F4 关闭当前编辑窗口</li>
+<li>Ctrl + W 关闭所有编辑窗口</li>
+<li>Ctrl + Shift + T 撤销最近关闭的一个文件编辑窗口</li>
+<li>Ctrl + Enter 保持开启</li>
+<li>Ctrl + Shift + Tab 调出最近打开的文件列表，重复按会切换</li>
+<li>Ctrl + Tab 与上面一致，顺序不一致</li>
+<li>Ctrl + P 复制当前打开文件的存放路径</li>
+<li>Ctrl + R 打开当前编辑文件存放位置【文件管理器】</li>
+</ul>
+</li>
+<li><p>显示快捷键</p>
+<ul>
+<li>F11 切换全屏模式</li>
+<li>Ctrl + =/- 放大 / 缩小</li>
+<li>Ctrl + B 侧边栏显示隐藏</li>
+<li>Ctrl + Shift + E 资源视图和编辑视图的焦点切换</li>
+<li>Ctrl + Shift + F 打开全局搜索</li>
+<li>Ctrl + Shift + G 打开 Git 可视管理</li>
+<li>Ctrl + Shift + D 打开 DeBug 面板</li>
+<li>Ctrl + Shift + X 打开插件市场面板</li>
+<li>Ctrl + Shift + H 在当前文件替换查询替换</li>
+<li>Ctrl + Shift + J 开启详细查询</li>
+<li>Ctrl + Shift + V 预览 Markdown 文件【编译后】</li>
+<li>Ctrl + K v 在边栏打开渲染后的视图【新建】</li>
+</ul>
+</li>
+<li><p>调试快捷键</p>
+<ul>
+<li>F9 添加解除断点</li>
+<li>F5 启动调试、继续</li>
+<li>F11 / Shift + F11 单步进入 / 单步跳出</li>
+<li>F10 单步跳过</li>
+</ul>
+</li>
+<li><p>集成终端快捷键</p>
+<ul>
+<li>Ctrl + ~ 打开集成终端</li>
+<li>Ctrl + Shift + ` 创建一个新的终端</li>
+<li>Ctrl + C 复制所选</li>
+<li>Ctrl + V 复制到当前激活的终端</li>
+<li>Shift + PgUp / PgDown 页面上下翻屏</li>
+<li>Ctrl + Home / End 滚动到页面头部或尾部</li>
+</ul>
+</li>
+<li><p>Ememet 快捷语法</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">li*10 //创建10个li元素</span><br><span class="line">div.className //创建&lt;div class=&quot;className&quot;&gt;&lt;/div&gt;</span><br><span class="line">div#idName //创建&lt;div id=&quot;idNamw&quot;&gt;&lt;/div&gt;</span><br><span class="line">div[attrName=name] //创建&lt;div attrName=&quot;name&quot;&gt;&lt;/div&gt;</span><br><span class="line">div&gt;li&gt;a //创建&lt;div&gt;&lt;li&gt;&lt;a&gt;&lt;/a&gt;&lt;/li&gt;&lt;/div&gt;</span><br><span class="line">div+p+span //创建&lt;div&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;span&gt;&lt;/span&gt;</span><br><span class="line">div&#123;文本文字&#125; //创建&lt;div&gt;文本文字&lt;/div&gt;</span><br><span class="line">div&gt;(header&gt;ul&gt;li*2&gt;a)+footer&gt;p //括号用于在复杂的 Emmet 缩写中处理一组子树</span><br></pre></td></tr></table></figure>
+
+<h1 id="常用插件推荐"><a href="#常用插件推荐" class="headerlink" title="常用插件推荐"></a>常用插件推荐</h1><h2 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h2><ul>
+<li>中文（简体）语言包 Chinese (Simplified) Language Pack for Visual Studio Code<br>将界面转换为中文</li>
+<li>Settings Sync<br>使用 GitHub Gist 同步多台计算机上的设置，代码段，主题，文件图标，启动，键绑定，工作区和扩展。（这个插件是真的好用。 ——闰土）</li>
+<li>Atuo Rename Tag<br>修改 html 标签，自动帮你完成头部和尾部闭合标签的同步修改</li>
+<li>beautify 格式化代码工具<br>美化 javascript，JSON，CSS，Sass，和 HTML 在 Visual Studio 代码。</li>
+<li>guides<br>显示代码对齐辅助线，很好用</li>
+<li>Indent-Rainbow<br>用四种不同颜色交替着色文本前面的缩进</li>
+<li>GitLens<br>git 日志查看插件<br>GitLens 增强了 Visual Studio Code 中内置的 Git 功能。例如 commits 搜索，历史记录和和查看代码作者身份，还能通过强大的比较命令获得有价值的见解等等</li>
+<li>REST Client<br>REST 客户端允许您直接发送 HTTP 请求并在 Visual Studio Code 中查看响应</li>
+<li>Auto Close Tag<br>自动闭合 HTML/XML 标签</li>
+<li>Auto Rename Tag<br>自动完成另一侧标签的同步修改</li>
+<li>JavaScript(ES6) code snippets<br>ES6 语法智能提示以及快速输入，除 js 外还支持.ts，.jsx，.tsx，.html，.vue，省去了配置其支持各种包含 js 代码文件的时间</li>
+<li></li>
+</ul>
+<h2 id="代码提示类插件"><a href="#代码提示类插件" class="headerlink" title="代码提示类插件"></a>代码提示类插件</h2><ul>
+<li>HTML Snippets<br>完整的 HTML 代码提示，包括 HTML5</li>
+<li>HTML CSS Support<br>在 html 标签上写 class 智能提示 css 样式</li>
+<li>jQuery Code Snippets<br>jQuery 代码提示<br>超过 130 个用于 JavaScript 代码的 jQuery 代码片段。<br>只需键入字母’jq’即可获得所有可用 jQuery 代码片段的列表。</li>
+</ul>
+<h2 id="VUE-插件"><a href="#VUE-插件" class="headerlink" title="VUE 插件"></a>VUE 插件</h2><ul>
+<li>vetur 语法高亮、智能感知、Emmet 等</li>
+<li>VueHelper snippet 代码片段</li>
+<li>ESLint 将 ESLint JavaScript 集成到 VS 代码中。</li>
+<li>prettier 代码规范性插件</li>
+</ul>
+<h1 id="VSCode-常见问题"><a href="#VSCode-常见问题" class="headerlink" title="VSCode 常见问题"></a>VSCode 常见问题</h1><p>1.代码折叠功能功能无效<br>问题描述：VSCode 的代码折叠功能失效，Folding 是开启状态也不生效。<br>解决：关闭屏幕阅读器优化功能 Accessibility Support 设置为 off</p>
+<h1 id="settings-json"><a href="#settings-json" class="headerlink" title="settings.json"></a>settings.json</h1><p>settings.json,VSCode 配置文件</p>
+<p>鼠标放在设置项左侧，点击出现的<code>More Actions...</code>图标，选择<code>Copy Settings as JSON</code>，该设置项会以 JSON 格式添加到粘贴板，可以复制到 settings.json 文件中方便修改设置</p>
+<p>我的 settings.json 设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">待更新</span><br></pre></td></tr></table></figure>
+
+</div><div class="post-copyright"><div class="post-copyright-author"><span class="post-copyright-meta">本文作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Wsli</a></span></div><div class="post-copyright-type"><span class="post-copyright-meta">本文链接: </span><span class="post-copyright-info"><a href="https://wsli10.github.io/2019/08/27/VSCode/">https://wsli10.github.io/2019/08/27/VSCode/</a></span></div><div class="post-copyright-notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://wsli10.github.io">李温水</a>！</span></div></div></article><div id="pagination"><div class="next-post pull-right"><span class="line line-top"></span><span class="line line-right"></span><span class="line line-bottom"></span><span class="line line-left"></span><a href="/2019/08/25/Less简单语法/"><span>Less简单语法</span><span>&nbsp;</span><i class="fas fa-angle-right"></i></a></div></div><!--div!= paginator()--></div></div><div class="button-hover" id="return-top"><i class="fas fa-arrow-up" aria-hidden="true"></i></div><footer><div id="footer"><div class="button-hover" id="side-button"><i class="fas fa-arrow-right"></i></div><div class="right-content"><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fas fa-file-o"></i></span><span id="busuanzi_value_page_pv"></span><span></span></div><div class="copyright">&copy;2017 ～ 2019 By Wsli</div></div></div></footer></div><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery-3.3.1.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/velocity.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery.mCustomScrollbar.concat.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/fan.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/canvas_bg.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/utils.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/scroll.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/sidebar.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/copy.js"></script><!--script(src=url)--></body></html>
